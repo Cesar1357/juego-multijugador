@@ -66,9 +66,7 @@ class Game {
             player.distance += 50;
             player.update();
         }
-        if(keyIsDown(Down_ARROW) && player.index !== null){
-            player.distance -= 50;
-            player.update();
+        
 
         }
         drawSprites();
