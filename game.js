@@ -67,8 +67,6 @@ class Game {
             player.update();
         }
         
-
-        }
         drawSprites();
     }
 
