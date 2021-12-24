@@ -55,7 +55,7 @@ class Game {
                 cars[index-1].y = y;
                 if(index===player.index){
                     cars[index-1].shapeColor = "red";
-                    camera.position.x = displayWidth;
+                    camera.position.x = cars[index-1].x;
                     camera.position.y = cars[index-1].y;
 
                 }
@@ -64,6 +64,10 @@ class Game {
         }
         if(keyIsDown(UP_ARROW) && player.index !== null){
             player.distance += 50;
+            player.update();
+        }
+        if(keyIsDown(Down_ARROW) && player.index !== null){
+            player.distance -= 50;
             player.update();
 
         }
